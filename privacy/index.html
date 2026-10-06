@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Somedaily privacy policy</title>
+<link rel="icon" href="../somedaily-mark.svg">
+<style>
+@font-face { font-family: "Outfit"; font-weight: 400; src: url("../fonts/outfit-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 700; src: url("../fonts/outfit-latin-700-normal.woff2") format("woff2"); }
+:root { --ink: #2A1840; --muted: #5E4A78; --ground: #FFF0C9; --paper: #FFFFFF; --line: #EAD9A8; }
+@media (prefers-color-scheme: dark) { :root { --ink: #FFF0C9; --muted: #CDBFE0; --ground: #1E1528; --paper: #2A1F36; --line: #463857; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 400 16.5px/1.6 "Outfit", system-ui, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; letter-spacing: -0.015em; margin-bottom: 28px; }
+.brand img { width: 36px; height: 36px; }
+article { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 28px 28px 20px; }
+h1 { font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+h2 { font-size: 21px; letter-spacing: -0.01em; margin: 28px 0 6px; }
+p, li { color: var(--muted); }
+strong { color: var(--ink); }
+code { font-size: 0.9em; background: var(--ground); border-radius: 6px; padding: 1px 5px; overflow-wrap: anywhere; }
+a { color: inherit; }
+ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<main>
+<div class="brand"><img src="../somedaily-mark.svg" alt="">somedaily</div>
+<article>
+<h1>Somedaily privacy policy</h1>
+<p>Last updated: 6 October 2026</p>
+<p>Somedaily is a Chrome extension that helps you decide what to watch from your YouTube Watch Later and what to let go of. This policy says exactly what it does with your data. In short: everything stays in your browser.</p>
+<h2>What Somedaily stores, and where</h2>
+<p>Somedaily keeps its data in your browser's local extension storage (IndexedDB and <code>chrome.storage.local</code>) on your computer:</p>
+<ul>
+<li><strong>Your Watch Later list</strong>: for each video, its YouTube video id, title, channel name and id, length, thumbnail address, how much of it you've watched (as YouTube reports it), when Somedaily first saw it, and its estimated or observed save date.</li>
+<li><strong>Your archive</strong>: videos you archived (by hand, or by the automatic rules below), with the reason and a copy of the details above, so you can search and restore them.</li>
+<li><strong>Watch progress</strong>: when you watch a video on youtube.com, how far you got and whether you opened it from Watch Later. Used for the homepage shelf and the "Finally" moment.</li>
+<li><strong>Weekly counts</strong>: how many videos you saved and cleared each week.</li>
+<li><strong>Settings</strong> and small bits of state, such as which suggestions you skipped and whether a page feature is paused.</li>
+</ul>
+<p>None of this is sent to Somedaily or anyone else. There is no Somedaily server, no account and no analytics.</p>
+<h2>What Somedaily sends over the network</h2>
+<ul>
+<li><strong>To YouTube, as you.</strong> To read your Watch Later and to remove or restore videos, Somedaily makes the same requests youtube.com's own page makes (YouTube's internal web API at <code>www.youtube.com/youtubei/v1/</code>), from an open YouTube tab and with the session you're already signed in with. Somedaily never sees or stores your Google password or cookies. Videos are removed only when you ask, or by the automatic rules (archive when watched, archive when unavailable; on by default, switchable in Settings, and only after your first cleanup). Archived videos are written to your archive before YouTube is touched. A video you Remove gets a short-lived local record for Undo, deleted after two minutes.</li>
+<li><strong>Thumbnails</strong> shown on Somedaily's own pages load from YouTube's image servers, as they would on youtube.com.</li>
+<li><strong>Remote configuration.</strong> Somedaily can download a small file of page selectors and API paths (at most every 12 hours), so it can keep working when YouTube changes its pages. The request carries no cookies and no identifiers. The file is plain data, never code. (Not enabled in this version.)</li>
+</ul>
+<p>Nothing else leaves your browser.</p>
+<h2>Sharing</h2>
+<p>The autopsy share card and the "Finally" image are drawn on your computer. They leave your browser only if you choose to download, copy or share them yourself.</p>
+<h2>Your control</h2>
+<ul>
+<li><strong>Settings → Reset Somedaily</strong> deletes all of Somedaily's local data. It never touches your YouTube account.</li>
+<li>Uninstalling Somedaily removes all of its data from your browser.</li>
+<li>Archived videos stay in your archive and can be restored to Watch Later. Remove takes a video out of Watch Later without archiving it (you can undo it for 30 seconds). Neither deletes anything from YouTube itself.</li>
+</ul>
+<h2>Permissions</h2>
+<ul>
+<li><code>storage</code>, <code>unlimitedStorage</code>: to keep your list and archive locally, including very long lists.</li>
+<li>Access to <code>www.youtube.com</code>: to read and edit your Watch Later and to show Somedaily inside YouTube's pages.</li>
+</ul>
+<p>Somedaily asks for nothing else: no browsing history, no other websites, no tabs permission.</p>
+<h2>Limited use</h2>
+<p>Somedaily's use of information is limited to providing the features described above. It does not sell, transfer or use your data for advertising, credit decisions or any purpose unrelated to the extension, and no person reads it.</p>
+<h2>Changes and contact</h2>
+<p>If this policy changes, the new version will be published at this address with a new date. Questions: [CONTACT EMAIL]</p>
+<p>Somedaily is not affiliated with or endorsed by YouTube or Google. YouTube is a trademark of Google LLC.</p>
+</article>
+</main>
+</body>
+</html>
