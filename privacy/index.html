@@ -39,12 +39,13 @@ ul { padding-left: 20px; }
 <li><strong>Your archive</strong>: videos you archived (by hand, or by the automatic rules below), with the reason and a copy of the details above, so you can search and restore them.</li>
 <li><strong>Watch progress</strong>: when you watch a video on youtube.com, how far you got and whether you opened it from Watch Later. Used for the homepage shelf and the "Finally" moment.</li>
 <li><strong>Weekly counts</strong>: how many videos you saved and cleared each week.</li>
+<li><strong>Your tags and YouTube's</strong>: tags you add to videos on the Watch Later page, and each video's tags and category as YouTube lists them (read in the background, a few at a time), for filtering.</li>
 <li><strong>Settings</strong> and small bits of state, such as which suggestions you skipped and whether a page feature is paused.</li>
 </ul>
 <p>None of this is sent to Somedaily or anyone else. There is no Somedaily server, no account and no analytics.</p>
 <h2>What Somedaily sends over the network</h2>
 <ul>
-<li><strong>To YouTube, as you.</strong> To read your Watch Later and to remove or restore videos, Somedaily makes the same requests youtube.com's own page makes (YouTube's internal web API at <code>www.youtube.com/youtubei/v1/</code>), from an open YouTube tab and with the session you're already signed in with. Somedaily never sees or stores your Google password or cookies. Videos are removed only when you ask, or by the automatic rules (archive when watched, archive when unavailable; on by default, switchable in Settings, and only after your first cleanup). Archived videos are written to your archive before YouTube is touched. A video you Remove gets a short-lived local record for Undo, deleted after two minutes.</li>
+<li><strong>To YouTube, as you.</strong> To read your Watch Later, to read each saved video's tags and category, and to remove, restore or reorder videos, Somedaily makes the same requests youtube.com's own page makes (YouTube's internal web API at <code>www.youtube.com/youtubei/v1/</code>), from an open YouTube tab and with the session you're already signed in with. Somedaily never sees or stores your Google password or cookies. Videos are removed only when you ask, or by the automatic rules (archive when watched, archive when unavailable; on by default, switchable in Settings, and only after your first cleanup). Archived videos are written to your archive before YouTube is touched. A video you Remove gets a short-lived local record for Undo, deleted after two minutes.</li>
 <li><strong>Thumbnails</strong> shown on Somedaily's own pages load from YouTube's image servers, as they would on youtube.com.</li>
 <li><strong>Remote configuration.</strong> Somedaily can download a small file of page selectors and API paths (at most every 12 hours), so it can keep working when YouTube changes its pages. The request carries no cookies and no identifiers. The file is plain data, never code. (Not enabled in this version.)</li>
 </ul>
@@ -55,7 +56,7 @@ ul { padding-left: 20px; }
 <ul>
 <li><strong>Settings → Reset Somedaily</strong> deletes all of Somedaily's local data. It never touches your YouTube account.</li>
 <li>Uninstalling Somedaily removes all of its data from your browser.</li>
-<li>Archived videos stay in your archive and can be restored to Watch Later. Remove takes a video out of Watch Later without archiving it (you can undo it for 30 seconds). Neither deletes anything from YouTube itself.</li>
+<li>Archived videos stay in your archive and can be restored to Watch Later. Remove takes a video out of Watch Later without archiving it (you can undo it for 5 seconds). Neither deletes anything from YouTube itself.</li>
 </ul>
 <h2>Permissions</h2>
 <ul>
